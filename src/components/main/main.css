@@ -154,3 +154,83 @@ animation: loader 4s infinite linear;
     font-weight: 300px;
     line-height: 1.8;
 }
+body.dark .main input,
+body.dark .main textarea {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+body.dark .main button {
+  background-color: #333;
+  color: #fff;
+}
+/* 🌑 Dark Mode Styling */
+body.dark .main {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .nav {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+body.dark .greet p span {
+  color: #00e676;
+}
+
+body.dark .cards .card {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  border: 1px solid #333;
+}
+
+body.dark .card img {
+  filter: brightness(0.8);
+}
+
+body.dark .card:hover {
+  background-color: #292929;
+}
+
+body.dark .result-title {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #444;
+}
+
+body.dark .result-title p {
+  color: #ffffff;
+}
+
+body.dark .result-data {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark .main-bottom {
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+}
+
+body.dark .search-box {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+
+body.dark .search-box input {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+}
+
+body.dark .search-box img {
+  filter: brightness(0.7);
+  cursor: pointer;
+}
+
+body.dark .bottom-info {
+  color: #aaaaaa;
+  font-size: 12px;
+  margin-top: 8px;
+}

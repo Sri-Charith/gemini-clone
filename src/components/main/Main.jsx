@@ -20,14 +20,14 @@ const Main = () => {
 		<div className="main">
 			<div className="nav">
 				<p>Gemini</p>
-				<img src={assets.user} alt="" />
+				<img src={assets.krishna} alt="" />
 			</div>
 			<div className="main-container">
 				{!showResults ? (
 					<>
 						<div className="greet">
 							<p>
-								<span>Hello , Dev </span>
+								<span>Hello , Krishna </span>
 							</p>
 							<p>How Can i Help You Today?</p>
 						</div>
@@ -45,11 +45,11 @@ const Main = () => {
 								className="card"
 								onClick={() =>
 									handleCardClick(
-										"Explain the process of photosynthesis in simple terms"
+										"Explain the Important Lines in BhagavatGita"
 									)
 								}
 							>
-								<p>Explain the process of photosynthesis in simple terms </p>
+								<p>Explain the Important Lines in BhagavatGita</p>
 								<img src={assets.message_icon} alt="" />
 							</div>
 							<div
@@ -77,7 +77,7 @@ const Main = () => {
 				) : (
 					<div className="result">
 						<div className="result-title">
-							<img src={assets.user} alt="" />
+							<img src={assets.krishna} alt="" />
 							<p>{recentPrompt}</p>
 						</div>
 						<div className="result-data">

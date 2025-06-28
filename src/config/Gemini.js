@@ -1,16 +1,12 @@
-
-
-// node --version # Should be >= 18
-// npm install @google/generative-ai
-
+// gemini.js
 import {
   GoogleGenerativeAI,
   HarmCategory,
   HarmBlockThreshold,
 } from "@google/generative-ai";
 
-const MODEL_NAME = "gemini-1.0-pro";
-const API_KEY = "Your Api Key ";
+const MODEL_NAME = "gemini-2.5-flash";
+const API_KEY = "Keep_your_api_key"; // Replace with your actual key locally
 
 async function runChat(prompt) {
   const genAI = new GoogleGenerativeAI(API_KEY);
@@ -42,17 +38,23 @@ async function runChat(prompt) {
     },
   ];
 
-  const chat = model.startChat({
-    generationConfig,
-    safetySettings,
-    history: [
-    ],
-  });
+  try {
+    const chat = model.startChat({
+      generationConfig,
+      safetySettings,
+      history: [],
+    });
 
-  const result = await chat.sendMessage(prompt);
-  const response = result.response;
-  console.log(response.text());
-  return response.text();
+    const result = await chat.sendMessage(prompt);
+    const response = result.response;
+    console.log("Gemini response:", response.text());
+
+    return response.text(); // ✅ Return this to use in React
+  } catch (err) {
+    console.error("Gemini API Error:", err);
+    return "Something went wrong while contacting Gemini API."; // ✅ Safe fallback
+  }
 }
 
- export default runChat;
+// ✅ Export properly
+export default runChat;
